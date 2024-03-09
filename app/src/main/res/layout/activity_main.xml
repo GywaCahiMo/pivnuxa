@@ -100,13 +100,36 @@
                         android:text="305 руб."
                         android:textSize="16sp" />
 
-                    <Button
-                        android:id="@+id/BuyLindemans"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:backgroundTint="#31C517"
-                        android:text="купить" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:text="+" />
+                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>

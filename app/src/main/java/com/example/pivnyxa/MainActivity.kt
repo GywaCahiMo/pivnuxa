@@ -4,12 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.LinearLayout
 import androidx.core.widget.NestedScrollView
-import com.example.pivnyxa.CartActivity.Companion.productList
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,33 +36,11 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
-        productList = mutableListOf(Product("Product 1", 10.0), Product("Product 2", 20.0))
-        //(productList as MutableList<Product>).add(Product("Product 3", 10.0))
-        //(productList as MutableList<Product>).remove(Product("Product 3", 10.0))
-
-        addBacket("aaa", 439.0)
-        removeBacket("ff", 45.0)
-    }
-    fun addBacket(name: String, price: Double){
-        if(productList.contains(Product(name, price))){
-            Log.i("meLog","true")
-
-        }
-        else{
-            (productList as MutableList<Product>).add(Product(name, price))
-        }
-    }
-    fun removeBacket(name: String, price: Double){
-        if(!productList.contains(Product(name, price))){
-            Log.i("meLog","false")
-        }
-        (productList as MutableList<Product>).remove(Product("Product 3", 10.0))
     }
 
 
     fun goToReactionGameActivity(view: View){
-        val intent = Intent(this, CartActivity::class.java)
-        startActivity(intent)
+        //val intent = Intent(this, CartActivity::class.java)
+        //startActivity(intent)
     }
 }

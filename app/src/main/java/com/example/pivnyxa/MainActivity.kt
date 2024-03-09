@@ -1,7 +1,6 @@
 package com.example.pivnyxa
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,11 +11,14 @@ import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 
 class MainActivity : AppCompatActivity() {
-    var totalPrice: Int = 0
+    companion object {
+        var totalPrice: Int = 0
+    }
 
     var countLindemans: Int = 0
     var countFuller: Int = 0
     var countChimay: Int = 0
+    var countSchineider:Int = 0
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,25 +59,36 @@ class MainActivity : AppCompatActivity() {
     }
     //------------------
     fun plussFuller(view: View){
-        val textLindeman : TextView = findViewById(R.id.textFuller)
-        plus(countFuller,399,  textLindeman)
-        countFuller = textLindeman.text.toString().toInt()
+        val textFuller : TextView = findViewById(R.id.textFuller)
+        plus(countFuller,399,  textFuller)
+        countFuller = textFuller.text.toString().toInt()
     }
     fun minusFuller(view: View){
-        val textLindeman : TextView = findViewById(R.id.textFuller)
-        minus(countFuller,399, textLindeman)
-        countFuller = textLindeman.text.toString().toInt()
+        val textFuller : TextView = findViewById(R.id.textFuller)
+        minus(countFuller,399, textFuller)
+        countFuller = textFuller.text.toString().toInt()
     }
     //------------------
     fun plussChimay(view: View){
-        val textLindeman : TextView = findViewById(R.id.textChimay)
-        plus(countChimay,399,  textLindeman)
-        countChimay = textLindeman.text.toString().toInt()
+        val textChimay : TextView = findViewById(R.id.textChimay)
+        plus(countChimay,399,  textChimay)
+        countChimay = textChimay.text.toString().toInt()
     }
     fun minusChimay(view: View){
-        val textLindeman : TextView = findViewById(R.id.textChimay)
-        minus(countChimay,399, textLindeman)
-        countChimay = textLindeman.text.toString().toInt()
+        val textChimay : TextView = findViewById(R.id.textChimay)
+        minus(countChimay,399, textChimay)
+        countChimay = textChimay.text.toString().toInt()
+    }
+    //------------------
+    fun plussSchineider(view: View){
+        val textSchineider : TextView = findViewById(R.id.textSchineider)
+        plus(countSchineider,399,  textSchineider)
+        countSchineider = textSchineider.text.toString().toInt()
+    }
+    fun minusSchineider(view: View){
+        val textSchineider: TextView = findViewById(R.id.textSchineider)
+        minus(countSchineider,399, textSchineider)
+        countSchineider = textSchineider.text.toString().toInt()
     }
     //------------------
     fun plus(count: Int, changeTotalPrice:Int, textCount: TextView){

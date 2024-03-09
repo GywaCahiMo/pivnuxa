@@ -4,12 +4,17 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 
 class MainActivity : AppCompatActivity() {
+    var totalPrice: Int = 0
+
+    var countLindemans: Int = 0
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,8 +42,31 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+    fun plussLindeman(view: View){
+        val textLindeman : TextView = findViewById(R.id.textLindeman)
+        pluss(countLindemans,305,  textLindeman)
+    }
+    fun minusLindeman(view: View){
+        val textLindeman : TextView = findViewById(R.id.textLindeman)
+        minus(countLindemans,305, textLindeman)
+    }
 
-
+    fun pluss(count: Int, changeTotalPrice:Int, textCount: TextView){
+        val newCount = count + 1
+        countLindemans = newCount
+        textCount.text = newCount.toString()
+        totalPrice += changeTotalPrice
+        Log.i("totalPrice", "$totalPrice)")
+    }
+    fun minus(count: Int, changeTotalPrice:Int, textCount: TextView){
+        if (count > 0){
+            val newCount = count - 1
+            countLindemans = newCount
+            textCount.text = newCount.toString()
+            totalPrice -= changeTotalPrice
+            Log.i("totalPrice", "$totalPrice)")
+        }
+    }
     fun goToReactionGameActivity(view: View){
         //val intent = Intent(this, CartActivity::class.java)
         //startActivity(intent)

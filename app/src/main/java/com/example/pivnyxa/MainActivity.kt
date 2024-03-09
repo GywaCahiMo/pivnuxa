@@ -14,7 +14,9 @@ import androidx.core.widget.NestedScrollView
 
 
 class MainActivity : AppCompatActivity() {
-    var totalPrice: Int = 0
+    companion object{
+        var totalPrice: Int = 0
+    }
 
     private lateinit var textLindeman : TextView
     private lateinit var textFuller : TextView
@@ -22,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textSchineider : TextView
     private lateinit var textChimayB : TextView
     private lateinit var textBernardus : TextView
+    private lateinit var textFullerLondon : TextView
+    private lateinit var textAecht : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +58,16 @@ class MainActivity : AppCompatActivity() {
         textSchineider = findViewById(R.id.textSchineider)
         textChimayB = findViewById(R.id.textChimayB)
         textBernardus = findViewById(R.id.textBernardus)
+        textFullerLondon= findViewById(R.id.textFullerLondon)
+        textAecht= findViewById(R.id.textAecht)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        /* отчистка sharedPref
+        val editor = sharedPref.edit();
+        editor.clear();
+        editor.apply();
+         */
         totalPrice = sharedPref.getInt("totalPrice",0)
         textLindeman.text = sharedPref.getString("textLindeman", "0")
         textFuller.text = sharedPref.getString("textFuller", "0")
@@ -64,6 +75,8 @@ class MainActivity : AppCompatActivity() {
         textSchineider.text = sharedPref.getString("textSchineider", "0")
         textChimayB.text = sharedPref.getString("textChimayB", "0")
         textBernardus.text = sharedPref.getString("textBernardus", "0")
+        textFullerLondon.text = sharedPref.getString("textFullerLondon", "0")
+        textAecht.text = sharedPref.getString("textAecht", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -77,6 +90,8 @@ class MainActivity : AppCompatActivity() {
             putString("textSchineider", textSchineider.text.toString())
             putString("textChimayB", textChimayB.text.toString())
             putString("textBernardus", textBernardus.text.toString())
+            putString("textFullerLondon", textFullerLondon.text.toString())
+            putString("textAecht", textAecht.text.toString())
             apply()
         }
     }
@@ -123,6 +138,20 @@ class MainActivity : AppCompatActivity() {
         minus(469, textBernardus)
     }
     //------------------
+    fun plussFullerLondon(view: View){
+        plus(385,  textFullerLondon)
+    }
+    fun minusFullerLondon(view: View){
+        minus(385, textFullerLondon)
+    }
+    //------------------
+    fun plussAecht(view: View){
+        plus(3879,  textAecht)
+    }
+    fun minusAecht(view: View){
+        minus(3879, textAecht)
+    }
+    //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){
         val newCount: Int = textCount.text.toString().toInt() + 1
         textCount.text = newCount.toString()
@@ -139,6 +168,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun goToSnaksActivity(view: View){
         val intent = Intent(this, snaks::class.java)
+        startActivity(intent)
+    }
+    fun goToSouvenirGlassesActivity(view: View){
+        val intent = Intent(this, souvenirGlassesActivity::class.java)
         startActivity(intent)
     }
 }

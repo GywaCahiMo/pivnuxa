@@ -1,6 +1,8 @@
 package com.example.pivnyxa
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,10 +17,11 @@ class MainActivity : AppCompatActivity() {
         var totalPrice: Int = 0
     }
 
-    var countLindemans: Int = 0
-    var countFuller: Int = 0
-    var countChimay: Int = 0
-    var countSchineider:Int = 0
+    private lateinit var textLindeman : TextView
+    private lateinit var textFuller : TextView
+    private lateinit var textChimay : TextView
+    private lateinit var textSchineider : TextView
+    private lateinit var textChimayB : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,68 +48,86 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+        textLindeman = findViewById(R.id.textLindeman)
+        textFuller  = findViewById(R.id.textFuller)
+        textChimay = findViewById(R.id.textChimay)
+        textSchineider = findViewById(R.id.textSchineider)
+        textChimayB = findViewById(R.id.textChimayB)
+
+        // Восстанавливаем состояние TextView, если оно было сохранено ранее
+        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        textLindeman.text = sharedPref.getString("textLindeman", "0")
+        textFuller.text = sharedPref.getString("textFuller", "0")
+        textChimay.text = sharedPref.getString("textChimay", "0")
+        textSchineider.text = sharedPref.getString("textSchineider", "0")
+        textChimayB.text = sharedPref.getString("textChimayB", "0")
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Сохраняем состояние TextView перед уничтожением активити
+        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        with (sharedPref.edit()) {
+            putString("textLindeman", textLindeman.text.toString())
+            putString("textFuller", textFuller.text.toString())
+            putString("textChimay", textChimay.text.toString())
+            putString("textSchineider", textSchineider.text.toString())
+            putString("textChimayB", textChimayB.text.toString())
+            apply()
+        }
     }
     //------------------
     fun plussLindeman(view: View){
-        val textLindeman : TextView = findViewById(R.id.textLindeman)
-        plus(countLindemans,305,  textLindeman)
-        countLindemans = textLindeman.text.toString().toInt()
+        plus(305,  textLindeman)
     }
     fun minusLindeman(view: View){
-        val textLindeman : TextView = findViewById(R.id.textLindeman)
-        minus(countLindemans,305, textLindeman)
-        countLindemans = textLindeman.text.toString().toInt()
+        minus(305, textLindeman)
     }
+
     //------------------
     fun plussFuller(view: View){
-        val textFuller : TextView = findViewById(R.id.textFuller)
-        plus(countFuller,399,  textFuller)
-        countFuller = textFuller.text.toString().toInt()
+        plus(399,  textFuller)
     }
     fun minusFuller(view: View){
-        val textFuller : TextView = findViewById(R.id.textFuller)
-        minus(countFuller,399, textFuller)
-        countFuller = textFuller.text.toString().toInt()
+        minus(399, textFuller)
     }
     //------------------
     fun plussChimay(view: View){
-        val textChimay : TextView = findViewById(R.id.textChimay)
-        plus(countChimay,399,  textChimay)
-        countChimay = textChimay.text.toString().toInt()
+        plus(415,  textChimay)
     }
     fun minusChimay(view: View){
-        val textChimay : TextView = findViewById(R.id.textChimay)
-        minus(countChimay,399, textChimay)
-        countChimay = textChimay.text.toString().toInt()
+        minus(415, textChimay)
     }
     //------------------
     fun plussSchineider(view: View){
-        val textSchineider : TextView = findViewById(R.id.textSchineider)
-        plus(countSchineider,399,  textSchineider)
-        countSchineider = textSchineider.text.toString().toInt()
+        plus(505,  textSchineider)
     }
     fun minusSchineider(view: View){
-        val textSchineider: TextView = findViewById(R.id.textSchineider)
-        minus(countSchineider,399, textSchineider)
-        countSchineider = textSchineider.text.toString().toInt()
+        minus(505, textSchineider)
     }
     //------------------
-    fun plus(count: Int, changeTotalPrice:Int, textCount: TextView){
-        val newCount = count + 1
+    fun plussChimayB(view: View){
+        plus(595,  textChimayB)
+    }
+    fun minusChimayB(view: View){
+        minus(595, textChimayB)
+    }
+    //------------------
+    fun plus(changeTotalPrice:Int, textCount: TextView){
+        val newCount: Int = textCount.text.toString().toInt() + 1
         textCount.text = newCount.toString()
         totalPrice += changeTotalPrice
         Log.i("totalPrice", "$totalPrice)")
     }
-    fun minus(count: Int, changeTotalPrice:Int, textCount: TextView){
-        if (count > 0){
-            val newCount = count - 1
+    fun minus(changeTotalPrice:Int, textCount: TextView){
+        if (textCount.text.toString().toInt() > 0){
+            val newCount: Int = textCount.text.toString().toInt() - 1
             textCount.text = newCount.toString()
             totalPrice -= changeTotalPrice
             Log.i("totalPrice", "$totalPrice)")
         }
     }
-    fun goToReactionGameActivity(view: View){
-        //val intent = Intent(this, CartActivity::class.java)
-        //startActivity(intent)
+    fun goToSnaksActivity(view: View){
+        val intent = Intent(this, snaks::class.java)
+        startActivity(intent)
     }
 }

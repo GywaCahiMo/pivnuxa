@@ -30,6 +30,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#1B38DD"
+            android:onClick="goToSnaksActivity"
             android:text="Снеки" />
 
         <Button
@@ -38,14 +39,6 @@
             android:layout_height="match_parent"
             android:backgroundTint="#1B38DD"
             android:text="Сувенирные бокалы" />
-
-        <Button
-            android:id="@+id/buttonBasket"
-            android:layout_width="46dp"
-            android:layout_height="34dp"
-            android:layout_weight="1"
-            android:onClick="goToReactionGameActivity"
-            android:text="Button" />
 
     </LinearLayout>
 
@@ -398,13 +391,38 @@
                         android:text="595 руб."
                         android:textSize="16sp" />
 
-                    <Button
-                        android:id="@+id/BuyChimayB"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:backgroundTint="#31C517"
-                        android:text="купить" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonChimayBMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusChimayB"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textChimayB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonChimayBPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussChimayB"
+                            android:text="+" />
+                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>

@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     var totalPrice: Int = 0
 
     var countLindemans: Int = 0
+    var countFuller: Int = 0
+    var countChimay: Int = 0
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,18 +44,42 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+    //------------------
     fun plussLindeman(view: View){
         val textLindeman : TextView = findViewById(R.id.textLindeman)
-        pluss(countLindemans,305,  textLindeman)
+        plus(countLindemans,305,  textLindeman)
+        countLindemans = textLindeman.text.toString().toInt()
     }
     fun minusLindeman(view: View){
         val textLindeman : TextView = findViewById(R.id.textLindeman)
         minus(countLindemans,305, textLindeman)
+        countLindemans = textLindeman.text.toString().toInt()
     }
-
-    fun pluss(count: Int, changeTotalPrice:Int, textCount: TextView){
+    //------------------
+    fun plussFuller(view: View){
+        val textLindeman : TextView = findViewById(R.id.textFuller)
+        plus(countFuller,399,  textLindeman)
+        countFuller = textLindeman.text.toString().toInt()
+    }
+    fun minusFuller(view: View){
+        val textLindeman : TextView = findViewById(R.id.textFuller)
+        minus(countFuller,399, textLindeman)
+        countFuller = textLindeman.text.toString().toInt()
+    }
+    //------------------
+    fun plussChimay(view: View){
+        val textLindeman : TextView = findViewById(R.id.textChimay)
+        plus(countChimay,399,  textLindeman)
+        countChimay = textLindeman.text.toString().toInt()
+    }
+    fun minusChimay(view: View){
+        val textLindeman : TextView = findViewById(R.id.textChimay)
+        minus(countChimay,399, textLindeman)
+        countChimay = textLindeman.text.toString().toInt()
+    }
+    //------------------
+    fun plus(count: Int, changeTotalPrice:Int, textCount: TextView){
         val newCount = count + 1
-        countLindemans = newCount
         textCount.text = newCount.toString()
         totalPrice += changeTotalPrice
         Log.i("totalPrice", "$totalPrice)")
@@ -61,7 +87,6 @@ class MainActivity : AppCompatActivity() {
     fun minus(count: Int, changeTotalPrice:Int, textCount: TextView){
         if (count > 0){
             val newCount = count - 1
-            countLindemans = newCount
             textCount.text = newCount.toString()
             totalPrice -= changeTotalPrice
             Log.i("totalPrice", "$totalPrice)")

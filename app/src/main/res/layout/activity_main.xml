@@ -174,13 +174,38 @@
                         android:text="399 руб."
                         android:textSize="16sp" />
 
-                    <Button
-                        android:id="@+id/BuyFuller"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:backgroundTint="#31C517"
-                        android:text="купить" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonFullerMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusFuller"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textFuller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonFullerPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussFuller"
+                            android:text="+" />
+                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -223,13 +248,38 @@
                         android:text="415 руб."
                         android:textSize="16sp" />
 
-                    <Button
-                        android:id="@+id/BuyChimay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:backgroundTint="#31C517"
-                        android:text="купить" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonChimayMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusChimay"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textChimay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonChimayPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussChimay"
+                            android:text="+" />
+                    </LinearLayout>
 
                 </LinearLayout>
 

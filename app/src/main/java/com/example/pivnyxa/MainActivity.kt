@@ -3,25 +3,25 @@ package com.example.pivnyxa
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 
+
 class MainActivity : AppCompatActivity() {
-    companion object {
-        var totalPrice: Int = 0
-    }
+    var totalPrice: Int = 0
 
     private lateinit var textLindeman : TextView
     private lateinit var textFuller : TextView
     private lateinit var textChimay : TextView
     private lateinit var textSchineider : TextView
     private lateinit var textChimayB : TextView
+    private lateinit var textBernardus : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,25 +53,30 @@ class MainActivity : AppCompatActivity() {
         textChimay = findViewById(R.id.textChimay)
         textSchineider = findViewById(R.id.textSchineider)
         textChimayB = findViewById(R.id.textChimayB)
+        textBernardus = findViewById(R.id.textBernardus)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        totalPrice = sharedPref.getInt("totalPrice",0)
         textLindeman.text = sharedPref.getString("textLindeman", "0")
         textFuller.text = sharedPref.getString("textFuller", "0")
         textChimay.text = sharedPref.getString("textChimay", "0")
         textSchineider.text = sharedPref.getString("textSchineider", "0")
         textChimayB.text = sharedPref.getString("textChimayB", "0")
+        textBernardus.text = sharedPref.getString("textBernardus", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         // Сохраняем состояние TextView перед уничтожением активити
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         with (sharedPref.edit()) {
+            putInt("totalPrice", totalPrice)
             putString("textLindeman", textLindeman.text.toString())
             putString("textFuller", textFuller.text.toString())
             putString("textChimay", textChimay.text.toString())
             putString("textSchineider", textSchineider.text.toString())
             putString("textChimayB", textChimayB.text.toString())
+            putString("textBernardus", textBernardus.text.toString())
             apply()
         }
     }
@@ -82,7 +87,6 @@ class MainActivity : AppCompatActivity() {
     fun minusLindeman(view: View){
         minus(305, textLindeman)
     }
-
     //------------------
     fun plussFuller(view: View){
         plus(399,  textFuller)
@@ -110,6 +114,13 @@ class MainActivity : AppCompatActivity() {
     }
     fun minusChimayB(view: View){
         minus(595, textChimayB)
+    }
+    //------------------
+    fun plussBernardus(view: View){
+        plus(469,  textBernardus)
+    }
+    fun minusBernardus(view: View){
+        minus(469, textBernardus)
     }
     //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){

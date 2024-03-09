@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="66dp"
+        android:elevation="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonBeer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#1B38DD"
+            android:text="Алкоголь" />
+
+        <Button
+            android:id="@+id/buttonSnacks"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#1B38DD"
+            android:text="Снеки" />
+
+        <Button
+            android:id="@+id/buttonSouvenirGlasses"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="#1B38DD"
+            android:text="Сувенирные бокалы" />
+
+        <Button
+            android:id="@+id/buttonBasket"
+            android:layout_width="46dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:onClick="goToReactionGameActivity"
+            android:text="Button" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/yourLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/Lindemans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageLindemans"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_4" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameLindemans"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Lindemans - Faro"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeLindemans"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="250 мл, 4.5%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceLindemans"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="305 руб."
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/BuyLindemans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:backgroundTint="#31C517"
+                        android:text="купить" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Fuller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageFuller"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_3" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameFuller"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Fuller's - ESB"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeFuller"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 5.5%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceFuller"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="399 руб."
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/BuyFuller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:backgroundTint="#31C517"
+                        android:text="купить" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Chimay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageChimay"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameChimay"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Chimay - Rouge (Première)"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeChimay"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="330 мл, 7%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceChimay"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="415 руб."
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/BuyChimay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:backgroundTint="#31C517"
+                        android:text="купить" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Schineider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageSchneider"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_1" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameSchineider"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Schneider Weisse - Aventinus"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeSchineider"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="330 мл, 12%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceSchineider"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="505 руб."
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/BuySchineider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:backgroundTint="#31C517"
+                        android:text="купить" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ChimayB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageChimayB"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_2" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameChimayB"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Chimay - Bleue (Grande Réserve)"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeChimayB"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="330 мл, 9%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceChimayB"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="595 руб."
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/BuyChimayB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:backgroundTint="#31C517"
+                        android:text="купить" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

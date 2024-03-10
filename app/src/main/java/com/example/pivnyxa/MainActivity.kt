@@ -174,4 +174,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, souvenirGlassesActivity::class.java)
         startActivity(intent)
     }
+    fun applicationActivity(view: View){
+        val intent = Intent(this, applicationActivity::class.java)
+        startActivity(intent)
+    }
 }

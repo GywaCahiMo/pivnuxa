@@ -13,13 +13,17 @@
         android:theme="@style/Theme.Pivnyxa"
         tools:targetApi="31">
         <activity
-            android:name=".souvenirGlassesActivity"
+            android:name=".applicationActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
+            android:name=".souvenirGlassesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".snaks"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

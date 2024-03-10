@@ -16,6 +16,9 @@ class souvenirGlassesActivity : AppCompatActivity() {
     private lateinit var textGlassFuller : TextView
     private lateinit var textGlassFourchette : TextView
     private lateinit var textGlassGoliath : TextView
+    private lateinit var textGlassKozel : TextView
+    private lateinit var textGlassBrugse : TextView
+    private lateinit var textGlassPICHET : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,12 +48,18 @@ class souvenirGlassesActivity : AppCompatActivity() {
         textGlassFuller = findViewById(R.id.textGlassFuller)
         textGlassFourchette = findViewById(R.id.textGlassFourchette)
         textGlassGoliath = findViewById(R.id.textGlassGoliath)
+        textGlassKozel = findViewById(R.id.textGlassKozel)
+        textGlassBrugse = findViewById(R.id.textGlassBrugse)
+        textGlassPICHET = findViewById(R.id.textGlassPICHET)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         textGlassFuller.text = sharedPref.getString("textGlassFuller", "0")
         textGlassFourchette.text = sharedPref.getString("textGlassFourchette", "0")
         textGlassGoliath.text = sharedPref.getString("textGlassGoliath", "0")
+        textGlassKozel.text = sharedPref.getString("textGlassKozel", "0")
+        textGlassBrugse.text = sharedPref.getString("textGlassBrugse", "0")
+        textGlassPICHET.text = sharedPref.getString("textGlassPICHET", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -61,6 +70,9 @@ class souvenirGlassesActivity : AppCompatActivity() {
             putString("textGlassFuller", textGlassFuller.text.toString())
             putString("textGlassFourchette", textGlassFourchette.text.toString())
             putString("textGlassGoliath", textGlassGoliath.text.toString())
+            putString("textGlassKozel", textGlassKozel.text.toString())
+            putString("textGlassBrugse", textGlassBrugse.text.toString())
+            putString("textGlassPICHET", textGlassPICHET.text.toString())
             apply()
         }
     }
@@ -84,6 +96,27 @@ class souvenirGlassesActivity : AppCompatActivity() {
     }
     fun minusGlassGoliath(view: View){
         minus(749, textGlassGoliath)
+    }
+    //------------------
+    fun plussGlassKozel(view: View){
+        plus(389,  textGlassKozel)
+    }
+    fun minusGlassKozel(view: View){
+        minus(389, textGlassKozel)
+    }
+    //------------------
+    fun plussGlassBrugse(view: View){
+        plus(579,  textGlassBrugse)
+    }
+    fun minusGlassBrugse(view: View){
+        minus(579, textGlassBrugse)
+    }
+    //------------------
+    fun plussGlassPICHET(view: View){
+        plus(1379,  textGlassPICHET)
+    }
+    fun minusGlassPICHET(view: View){
+        minus(1379, textGlassPICHET)
     }
     //------------------
 

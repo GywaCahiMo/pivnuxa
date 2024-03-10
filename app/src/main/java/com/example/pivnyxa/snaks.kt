@@ -20,6 +20,8 @@ class snaks : AppCompatActivity() {
     private lateinit var textBaranina : TextView
     private lateinit var textIndeika : TextView
     private lateinit var textYtka : TextView
+    private lateinit var textChicken : TextView
+    private lateinit var textPork : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +54,8 @@ class snaks : AppCompatActivity() {
         textBaranina = findViewById(R.id.textBaranina)
         textIndeika = findViewById(R.id.textIndeika)
         textYtka = findViewById(R.id.textYtka)
+        textChicken = findViewById(R.id.textChicken)
+        textPork = findViewById(R.id.textPork)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
@@ -61,6 +65,8 @@ class snaks : AppCompatActivity() {
         textBaranina.text = sharedPref.getString("textBaranina", "0")
         textIndeika.text = sharedPref.getString("textIndeika", "0")
         textYtka.text = sharedPref.getString("textYtka", "0")
+        textChicken.text = sharedPref.getString("textChicken", "0")
+        textPork.text = sharedPref.getString("textPork", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -74,6 +80,8 @@ class snaks : AppCompatActivity() {
             putString("textBaranina", textBaranina.text.toString())
             putString("textIndeika", textIndeika.text.toString())
             putString("textYtka", textYtka.text.toString())
+            putString("textChicken", textChicken.text.toString())
+            putString("textPork", textPork.text.toString())
             apply()
         }
     }
@@ -118,6 +126,20 @@ class snaks : AppCompatActivity() {
     }
     fun minusYtka(view: View){
         minus(195, textYtka)
+    }
+    //------------------
+    fun plussChicken(view: View){
+        plus(149,  textChicken)
+    }
+    fun minusChicken(view: View){
+        minus(149, textChicken)
+    }
+    //------------------
+    fun plussPork(view: View){
+        plus(175,  textPork)
+    }
+    fun minusPork(view: View){
+        minus(175, textPork)
     }
     //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){

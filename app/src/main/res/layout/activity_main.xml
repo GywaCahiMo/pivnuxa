@@ -67,6 +67,450 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/Wild"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageWild"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_18" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameWild"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Сидр Brothers - Wild Fruit Cider"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeWild"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 4%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceWild"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="415 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonWildMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusWild"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textWild"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonWildPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussWild"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Toffee"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageToffee"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_17" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameToffee"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Сидр Brothers - Toffee Apple Cider"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeToffee"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 4%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceToffee"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="415 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonToffeeMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusToffee"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textToffee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonToffeePlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussToffee"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Strawberry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageStrawberry"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_16" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameStrawberry"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Сидр Brothers - Strawberry and Lime English Cider"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeStrawberry"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 4%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceStrawberry"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="415 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonStrawberryMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusStrawberry"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textStrawberry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonStrawberryPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussStrawberry"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Rhubarb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageRhubarb"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_15" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameRhubarb"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Сидр Brothers - Rhubarb and Custard"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeRhubarb"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 4%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceRhubarb"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="415 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonRhubarbMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusRhubarb"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textRhubarb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonRhubarbPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussRhubarb"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Raspberry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageRaspberry"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_14" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameRaspberry"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Сидр Brothers - Raspberry Ripple English Cider"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeRaspberry"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 4%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceRaspberry"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="415 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonRaspberryMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusRaspberry"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textRaspberry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonRaspberryPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussRaspberry"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/GuldenBrothers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageGuldenBrothers"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_13" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameBrothers"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Сидр Brothers - Festival Apple English Cider"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeBrothers"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 5%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceBrothers"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="429 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonBrothersMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusBrothers"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textBrothers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonBrothersPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussBrothers"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/GuldenDraak"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

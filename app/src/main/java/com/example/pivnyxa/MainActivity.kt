@@ -30,6 +30,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textEngel : TextView
     private lateinit var textFloris : TextView
     private lateinit var textGuldenDraak : TextView
+    private lateinit var textBrothers : TextView
+    private lateinit var textRaspberry : TextView
+    private lateinit var textRhubarb : TextView
+    private lateinit var textStrawberry : TextView
+    private lateinit var textToffee : TextView
+    private lateinit var textWild : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,6 +75,12 @@ class MainActivity : AppCompatActivity() {
         textEngel = findViewById(R.id.textEngel)
         textFloris = findViewById(R.id.textFloris)
         textGuldenDraak = findViewById(R.id.textGuldenDraak)
+        textBrothers = findViewById(R.id.textBrothers)
+        textRaspberry = findViewById(R.id.textRaspberry)
+        textRhubarb  = findViewById(R.id.textRhubarb)
+        textStrawberry  = findViewById(R.id.textStrawberry)
+        textToffee  = findViewById(R.id.textToffee)
+        textWild  = findViewById(R.id.textWild)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
@@ -86,6 +98,12 @@ class MainActivity : AppCompatActivity() {
         textEngel.text = sharedPref.getString("textEngel", "0")
         textFloris.text = sharedPref.getString("textFloris", "0")
         textGuldenDraak.text = sharedPref.getString("textGuldenDraak", "0")
+        textBrothers.text = sharedPref.getString("textBrothers", "0")
+        textRaspberry.text = sharedPref.getString("textRaspberry", "0")
+        textRhubarb.text = sharedPref.getString("textRhubarb", "0")
+        textStrawberry.text = sharedPref.getString("textStrawberry", "0")
+        textToffee.text = sharedPref.getString("textToffee", "0")
+        textWild.text = sharedPref.getString("textWild", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -106,6 +124,12 @@ class MainActivity : AppCompatActivity() {
             putString("textEngel", textEngel.text.toString())
             putString("textFloris", textFloris.text.toString())
             putString("textGuldenDraak", textGuldenDraak.text.toString())
+            putString("textBrothers", textBrothers.text.toString())
+            putString("textRaspberry", textRaspberry.text.toString())
+            putString("textRhubarb", textRhubarb.text.toString())
+            putString("textStrawberry", textStrawberry.text.toString())
+            putString("textToffee", textToffee.text.toString())
+            putString("textWild", textWild.text.toString())
             apply()
         }
     }
@@ -199,6 +223,48 @@ class MainActivity : AppCompatActivity() {
     }
     fun minusGuldenDraak(view: View){
         minus(339, textGuldenDraak)
+    }
+    //------------------
+    fun plussBrothers(view: View){
+        plus(429,  textBrothers)
+    }
+    fun minusBrothers(view: View){
+        minus(429, textBrothers)
+    }
+    //------------------
+    fun plussRaspberry(view: View){
+        plus(415,  textRaspberry)
+    }
+    fun minusRaspberry(view: View){
+        minus(415, textRaspberry)
+    }
+    //------------------
+    fun plussRhubarb(view: View){
+        plus(415,  textRhubarb)
+    }
+    fun minusRhubarb(view: View){
+        minus(415, textRhubarb)
+    }
+    //------------------
+    fun plussStrawberry(view: View){
+        plus(415,  textStrawberry)
+    }
+    fun minusStrawberry(view: View){
+        minus(415, textStrawberry)
+    }
+    //------------------
+    fun plussToffee(view: View){
+        plus(415,  textToffee)
+    }
+    fun minusToffee(view: View){
+        minus(415, textToffee)
+    }
+    //------------------
+    fun plussWild(view: View){
+        plus(415,  textWild)
+    }
+    fun minusWild(view: View){
+        minus(415, textWild)
     }
     //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){

@@ -12,7 +12,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 
-
 class MainActivity : AppCompatActivity() {
     companion object{
         var totalPrice: Int = 0
@@ -26,6 +25,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textBernardus : TextView
     private lateinit var textFullerLondon : TextView
     private lateinit var textAecht : TextView
+    private lateinit var textDelirium : TextView
+    private lateinit var textDuvel : TextView
+    private lateinit var textEngel : TextView
+    private lateinit var textFloris : TextView
+    private lateinit var textGuldenDraak : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,16 +62,16 @@ class MainActivity : AppCompatActivity() {
         textSchineider = findViewById(R.id.textSchineider)
         textChimayB = findViewById(R.id.textChimayB)
         textBernardus = findViewById(R.id.textBernardus)
-        textFullerLondon= findViewById(R.id.textFullerLondon)
-        textAecht= findViewById(R.id.textAecht)
+        textFullerLondon = findViewById(R.id.textFullerLondon)
+        textAecht = findViewById(R.id.textAecht)
+        textDelirium = findViewById(R.id.textDelirium)
+        textDuvel = findViewById(R.id.textDuvel)
+        textEngel = findViewById(R.id.textEngel)
+        textFloris = findViewById(R.id.textFloris)
+        textGuldenDraak = findViewById(R.id.textGuldenDraak)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
-        /* отчистка sharedPref
-        val editor = sharedPref.edit();
-        editor.clear();
-        editor.apply();
-         */
         totalPrice = sharedPref.getInt("totalPrice",0)
         textLindeman.text = sharedPref.getString("textLindeman", "0")
         textFuller.text = sharedPref.getString("textFuller", "0")
@@ -77,6 +81,11 @@ class MainActivity : AppCompatActivity() {
         textBernardus.text = sharedPref.getString("textBernardus", "0")
         textFullerLondon.text = sharedPref.getString("textFullerLondon", "0")
         textAecht.text = sharedPref.getString("textAecht", "0")
+        textDelirium.text = sharedPref.getString("textDelirium", "0")
+        textDuvel.text = sharedPref.getString("textDuvel", "0")
+        textEngel.text = sharedPref.getString("textEngel", "0")
+        textFloris.text = sharedPref.getString("textFloris", "0")
+        textGuldenDraak.text = sharedPref.getString("textGuldenDraak", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -92,6 +101,11 @@ class MainActivity : AppCompatActivity() {
             putString("textBernardus", textBernardus.text.toString())
             putString("textFullerLondon", textFullerLondon.text.toString())
             putString("textAecht", textAecht.text.toString())
+            putString("textDelirium", textDelirium.text.toString())
+            putString("textDuvel", textDuvel.text.toString())
+            putString("textEngel", textEngel.text.toString())
+            putString("textFloris", textFloris.text.toString())
+            putString("textGuldenDraak", textGuldenDraak.text.toString())
             apply()
         }
     }
@@ -150,6 +164,41 @@ class MainActivity : AppCompatActivity() {
     }
     fun minusAecht(view: View){
         minus(3879, textAecht)
+    }
+    //------------------
+    fun plussDelirium(view: View){
+        plus(525,  textDelirium)
+    }
+    fun minusDelirium(view: View){
+        minus(525, textDelirium)
+    }
+    //------------------
+    fun plussDuvel(view: View){
+        plus(465,  textDuvel)
+    }
+    fun minusDuvel(view: View){
+        minus(465, textDuvel)
+    }
+    //------------------
+    fun plussEngel(view: View){
+        plus(379,  textEngel)
+    }
+    fun minusEngel(view: View){
+        minus(379, textEngel)
+    }
+    //------------------
+    fun plussFloris(view: View){
+        plus(335,  textFloris)
+    }
+    fun minusFloris(view: View){
+        minus(335, textFloris)
+    }
+    //------------------
+    fun plussGuldenDraak(view: View){
+        plus(339,  textGuldenDraak)
+    }
+    fun minusGuldenDraak(view: View){
+        minus(339, textGuldenDraak)
     }
     //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){

@@ -67,6 +67,375 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/GuldenDraak"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageGuldenDraak"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_12" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameGuldenDraak"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Gulden Draak - 9000 Quadruple"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeGuldenDraak"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceGuldenDraak"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="399 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonGuldenDraakMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusGuldenDraak"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textGuldenDraak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonGuldenDraakPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussGuldenDraak"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Floris"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageFloris"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_11" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameFloris"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Floris - Chocolat"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeFloris"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="330 мл, 4.2%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceFloris"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="335 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonFlorisMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusFloris"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textFloris"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonFlorisPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussFloris"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Engel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageEngel"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_10" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameEngel"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Engel - Gold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeEngel"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="500 мл, 5.4%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceEngel"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="379 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonEngelMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusEngel"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textEngel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonEngelPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussEngel"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Duvel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageDuvel"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_9" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameDuvel"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Duvel"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeDuvel"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="330 мл, 8.5%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceDuvel"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="465 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonDuvelMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusDuvel"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textDuvel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonDuvelPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussDuvel"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Delirium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageDelirium"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_8" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameDelirium"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Пиво Delirium - Noël / Christmas"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeDelirium"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="330 мл, 10%"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceDelirium"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="525 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonDeliriumMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusDelirium"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textDelirium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonDeliriumPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussDelirium"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/Aecht"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

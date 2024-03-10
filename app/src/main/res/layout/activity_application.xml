@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="игторовая цена"
+            android:text="Итоговая цена"
             android:textSize="20sp" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="введите телефон"
+            android:hint="Введите телефон"
             android:inputType="text" />
 
         <EditText
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="введите адрес"
+            android:hint="Введите адрес"
             android:inputType="text" />
 
         <Button
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="sendARequest"
-            android:text="отправить заявку" />
+            android:text="Отправить заявку" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

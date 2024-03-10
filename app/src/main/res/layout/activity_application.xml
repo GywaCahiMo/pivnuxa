@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -25,7 +25,7 @@
             android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/editTextAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -36,6 +36,7 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="sendARequest"
             android:text="отправить заявку" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

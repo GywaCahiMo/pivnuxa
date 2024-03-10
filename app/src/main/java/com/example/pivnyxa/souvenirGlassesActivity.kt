@@ -51,6 +51,7 @@ class souvenirGlassesActivity : AppCompatActivity() {
         // Сохраняем состояние TextView перед уничтожением активити
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         with (sharedPref.edit()) {
+            putInt("totalPrice", MainActivity.totalPrice)
             putString("textGlassFuller", textGlassFuller.text.toString())
             apply()
         }

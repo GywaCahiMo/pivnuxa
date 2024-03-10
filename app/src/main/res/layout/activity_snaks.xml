@@ -67,6 +67,152 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/Conina"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageConina"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_1_3" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameConina"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Ломоть - Конина с чесноком и кориандром ( вяленое мясо)"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeConina"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceConina"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="185 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonConinaMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusConina"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textConina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonConinaPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussConina"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Gov"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageGov"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_2_1" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameGov"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Ломоть - Говядина оригинальная ( вяленое мясо"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeGov"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceGov"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="179 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonGovMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusGov"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textGov"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonGovPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussGov"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/Strays"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

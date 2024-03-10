@@ -15,6 +15,8 @@ import com.example.pivnyxa.MainActivity.Companion.totalPrice
 
 class snaks : AppCompatActivity() {
     private lateinit var textStrays : TextView
+    private lateinit var textGov : TextView
+    private lateinit var textConina : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,17 +44,24 @@ class snaks : AppCompatActivity() {
             true
         }
         textStrays = findViewById(R.id.textStrays)
+        textGov = findViewById(R.id.textGov)
+        textConina = findViewById(R.id.textConina)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         textStrays.text = sharedPref.getString("textStrays", "0")
+        textGov.text = sharedPref.getString("textGov", "0")
+        textConina.text = sharedPref.getString("textConina", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         // Сохраняем состояние TextView перед уничтожением активити
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         with (sharedPref.edit()) {
+            putInt("totalPrice", totalPrice)
             putString("textStrays", textStrays.text.toString())
+            putString("textGov", textGov.text.toString())
+            putString("textConina", textConina.text.toString())
             apply()
         }
     }
@@ -62,6 +71,20 @@ class snaks : AppCompatActivity() {
     }
     fun minusStrays(view: View){
         minus(219, textStrays)
+    }
+    //------------------
+    fun plussGov(view: View){
+        plus(179,  textGov)
+    }
+    fun minusGov(view: View){
+        minus(179, textGov)
+    }
+    //------------------
+    fun plussConina(view: View){
+        plus(185,  textConina)
+    }
+    fun minusConina(view: View){
+        minus(185, textConina)
     }
     //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){

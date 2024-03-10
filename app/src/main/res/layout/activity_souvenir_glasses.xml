@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".souvenirGlassesActivity">
+
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="66dp"
@@ -33,13 +34,104 @@
             android:onClick="goToSnaksActivity"
             android:text="Снеки" />
 
-    <Button
-        android:id="@+id/buttonSouvenirGlasses"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:backgroundTint="#1B38DD"
-        android:text="Сувенирные бокалы" />
+        <Button
+            android:id="@+id/buttonSouvenirGlasses"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="#1B38DD"
+            android:text="Сувенирные бокалы" />
 
     </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewSouvenirGlasses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/yourLayoutSouvenirGlasses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/GlassFuller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageGlassFuller"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_1_2" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameGlassFuller"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Бокал Fuller's"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeGlassFuller"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:text="284 мл"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceGlassFuller"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="449 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonGlassFullerMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusGlassFuller"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textGlassFuller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonGlassFullerPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussGlassFuller"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

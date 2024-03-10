@@ -14,6 +14,8 @@ import androidx.core.widget.NestedScrollView
 
 class souvenirGlassesActivity : AppCompatActivity() {
     private lateinit var textGlassFuller : TextView
+    private lateinit var textGlassFourchette : TextView
+    private lateinit var textGlassGoliath : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,10 +43,14 @@ class souvenirGlassesActivity : AppCompatActivity() {
             true
         }
         textGlassFuller = findViewById(R.id.textGlassFuller)
+        textGlassFourchette = findViewById(R.id.textGlassFourchette)
+        textGlassGoliath = findViewById(R.id.textGlassGoliath)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         textGlassFuller.text = sharedPref.getString("textGlassFuller", "0")
+        textGlassFourchette.text = sharedPref.getString("textGlassFourchette", "0")
+        textGlassGoliath.text = sharedPref.getString("textGlassGoliath", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -53,6 +59,8 @@ class souvenirGlassesActivity : AppCompatActivity() {
         with (sharedPref.edit()) {
             putInt("totalPrice", MainActivity.totalPrice)
             putString("textGlassFuller", textGlassFuller.text.toString())
+            putString("textGlassFourchette", textGlassFourchette.text.toString())
+            putString("textGlassGoliath", textGlassGoliath.text.toString())
             apply()
         }
     }
@@ -62,6 +70,20 @@ class souvenirGlassesActivity : AppCompatActivity() {
     }
     fun minusGlassFuller(view: View){
         minus(449, textGlassFuller)
+    }
+    //------------------
+    fun plussGlassFourchette(view: View){
+        plus(675,  textGlassFourchette)
+    }
+    fun minusGlassFourchette(view: View){
+        minus(675, textGlassFourchette)
+    }
+    //------------------
+    fun plussGlassGoliath(view: View){
+        plus(749,  textGlassGoliath)
+    }
+    fun minusGlassGoliath(view: View){
+        minus(749, textGlassGoliath)
     }
     //------------------
 

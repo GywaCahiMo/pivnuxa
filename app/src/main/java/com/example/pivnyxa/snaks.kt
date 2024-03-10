@@ -17,6 +17,9 @@ class snaks : AppCompatActivity() {
     private lateinit var textStrays : TextView
     private lateinit var textGov : TextView
     private lateinit var textConina : TextView
+    private lateinit var textBaranina : TextView
+    private lateinit var textIndeika : TextView
+    private lateinit var textYtka : TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,12 +49,18 @@ class snaks : AppCompatActivity() {
         textStrays = findViewById(R.id.textStrays)
         textGov = findViewById(R.id.textGov)
         textConina = findViewById(R.id.textConina)
+        textBaranina = findViewById(R.id.textBaranina)
+        textIndeika = findViewById(R.id.textIndeika)
+        textYtka = findViewById(R.id.textYtka)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         textStrays.text = sharedPref.getString("textStrays", "0")
         textGov.text = sharedPref.getString("textGov", "0")
         textConina.text = sharedPref.getString("textConina", "0")
+        textBaranina.text = sharedPref.getString("textBaranina", "0")
+        textIndeika.text = sharedPref.getString("textIndeika", "0")
+        textYtka.text = sharedPref.getString("textYtka", "0")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -62,6 +71,9 @@ class snaks : AppCompatActivity() {
             putString("textStrays", textStrays.text.toString())
             putString("textGov", textGov.text.toString())
             putString("textConina", textConina.text.toString())
+            putString("textBaranina", textBaranina.text.toString())
+            putString("textIndeika", textIndeika.text.toString())
+            putString("textYtka", textYtka.text.toString())
             apply()
         }
     }
@@ -85,6 +97,27 @@ class snaks : AppCompatActivity() {
     }
     fun minusConina(view: View){
         minus(185, textConina)
+    }
+    //------------------
+    fun plussBaranina(view: View){
+        plus(195,  textBaranina)
+    }
+    fun minusBaranina(view: View){
+        minus(195, textBaranina)
+    }
+    //------------------
+    fun plussIndeika(view: View){
+        plus(175,  textIndeika)
+    }
+    fun minusIndeika(view: View){
+        minus(175, textIndeika)
+    }
+    //------------------
+    fun plussYtka(view: View){
+        plus(195,  textYtka)
+    }
+    fun minusYtka(view: View){
+        minus(195, textYtka)
     }
     //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){

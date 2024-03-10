@@ -67,6 +67,225 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/Ytka"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageYtka"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_1_6" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameYtka"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Ломоть - Утка с черносливом ( вяленое мясо)"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeYtka"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceYtka"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="195 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonYtkaMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusYtka"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textYtka"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonYtkaPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussYtka"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Indeika"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageIndeika"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_1_5" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameIndeika"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Ломоть - Индейка с куркумой ( вяленое мясо)"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeIndeika"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceIndeika"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="175 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonIndeikaMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusIndeika"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textIndeika"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonIndeikaPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussIndeika"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Baranina"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageBaranina"
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_1_4" />
+
+                <LinearLayout
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nameBaranina"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Ломоть - Баранина с кориандром ( вяленое мясо"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/volumeBaranina"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/priceBaranina"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="195 руб."
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonBaraninaMinus"
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="minusBaranina"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textBaranina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/buttonBaraninaPlus"
+                            android:layout_width="5dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="#31C517"
+                            android:onClick="plussBaranina"
+                            android:text="+" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/Conina"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

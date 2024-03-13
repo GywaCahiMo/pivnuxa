@@ -1150,7 +1150,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:backgroundTint="#31C517"
-                            android:onClick="minusLindeman"
                             android:text="-" />
 
                         <TextView

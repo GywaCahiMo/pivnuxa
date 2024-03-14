@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         var totalPrice: Int = 0
     }
     private lateinit var AllText: Array<TextView>
-
     @SuppressLint("ClickableViewAccessibility", "CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

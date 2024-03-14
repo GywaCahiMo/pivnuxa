@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
-
     companion object {
         private const val DATABASE_NAME = "UserData.db"
         private const val DATABASE_VERSION = 1
@@ -16,12 +15,10 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val COLUMN_ADDRESS = "address"
         private const val COLUMN_PRODUCTS = "products"
     }
-
     override fun onCreate(db: SQLiteDatabase) {
         val createTable = "CREATE TABLE $TABLE_NAME ($COLUMN_ID INTEGER PRIMARY KEY, $COLUMN_PHONE TEXT, $COLUMN_ADDRESS TEXT,$COLUMN_PRODUCTS TEXT)"
         db.execSQL(createTable)
     }
-
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         onCreate(db)

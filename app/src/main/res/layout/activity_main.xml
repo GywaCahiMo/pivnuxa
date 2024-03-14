@@ -88,21 +88,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Сидр Brothers - Wild Fruit Cider"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeWild"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceWild"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="415 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -125,7 +128,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonWildPlus"
@@ -162,21 +166,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Сидр Brothers - Toffee Apple Cider"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeToffee"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceToffee"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="415 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -199,7 +206,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonToffeePlus"
@@ -236,21 +244,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Сидр Brothers - Strawberry and Lime English Cider"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeStrawberry"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceStrawberry"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="415 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -273,7 +284,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonStrawberryPlus"
@@ -310,21 +322,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Сидр Brothers - Rhubarb and Custard"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeRhubarb"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceRhubarb"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="415 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -347,7 +362,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonRhubarbPlus"
@@ -384,21 +400,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Сидр Brothers - Raspberry Ripple English Cider"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeRaspberry"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceRaspberry"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="415 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -421,7 +440,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonRaspberryPlus"
@@ -458,21 +478,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Сидр Brothers - Festival Apple English Cider"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeBrothers"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 5%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceBrothers"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="429 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -495,7 +518,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonBrothersPlus"
@@ -532,20 +556,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Gulden Draak - 9000 Quadruple"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeGuldenDraak"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light" />
 
                     <TextView
                         android:id="@+id/priceGuldenDraak"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="399 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -568,7 +595,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonGuldenDraakPlus"
@@ -605,21 +633,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Floris - Chocolat"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeFloris"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 4.2%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceFloris"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="335 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -642,7 +673,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonFlorisPlus"
@@ -679,21 +711,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Engel - Gold"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeEngel"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 5.4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceEngel"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="379 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -716,7 +751,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonEngelPlus"
@@ -753,21 +789,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Duvel"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeDuvel"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 8.5%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceDuvel"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="465 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -790,7 +829,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonDuvelPlus"
@@ -827,21 +867,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Delirium - Noël / Christmas"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeDelirium"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 10%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceDelirium"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="525 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -864,7 +907,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonDeliriumPlus"
@@ -901,21 +945,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Aecht Schlenkerla - Rauchbier Märzen"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeAecht"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="5000 мл, 5.1%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceAecht"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="3 879 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -938,7 +985,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonAechtPlus"
@@ -975,21 +1023,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Fuller's - London Porter"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeFullerLondon"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 5.4%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceFullerLondon"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="385 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1012,7 +1063,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonFullerLondonPlus"
@@ -1049,21 +1101,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво St. Bernardus - Abt 12"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeBernardus"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 10%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceBernardus"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="469 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1086,7 +1141,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonBernardusPlus"
@@ -1123,21 +1179,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Lindemans - Faro"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeLindemans"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="250 мл, 4.5%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceLindemans"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="305 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1159,7 +1218,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/button2"
@@ -1196,21 +1256,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Fuller's - ESB"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeFuller"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="500 мл, 5.5%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceFuller"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="399 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1233,7 +1296,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonFullerPlus"
@@ -1270,21 +1334,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Chimay - Rouge (Première)"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeChimay"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 7%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceChimay"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="415 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1307,7 +1374,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonChimayPlus"
@@ -1345,21 +1413,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Schneider Weisse - Aventinus"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeSchineider"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 12%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceSchineider"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="505 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1382,7 +1453,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonSchineiderPlus"
@@ -1420,21 +1492,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Пиво Chimay - Bleue (Grande Réserve)"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/volumeChimayB"
                         android:layout_width="match_parent"
                         android:layout_height="31dp"
                         android:text="330 мл, 9%"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <TextView
                         android:id="@+id/priceChimayB"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:text="595 руб."
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/comfortaa_light"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1457,7 +1532,8 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="0"
-                            android:textSize="16sp" />
+                            android:textSize="16sp"
+                            android:fontFamily="@font/comfortaa_light"/>
 
                         <Button
                             android:id="@+id/buttonChimayBPlus"

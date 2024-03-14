@@ -8,17 +8,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 
 class souvenirGlassesActivity : AppCompatActivity() {
-    private lateinit var textGlassFuller : TextView
-    private lateinit var textGlassFourchette : TextView
-    private lateinit var textGlassGoliath : TextView
-    private lateinit var textGlassKozel : TextView
-    private lateinit var textGlassBrugse : TextView
-    private lateinit var textGlassPICHET : TextView
+    private lateinit var AllText: Array<TextView>
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,81 +41,47 @@ class souvenirGlassesActivity : AppCompatActivity() {
             }
             true
         }
-        textGlassFuller = findViewById(R.id.textGlassFuller)
-        textGlassFourchette = findViewById(R.id.textGlassFourchette)
-        textGlassGoliath = findViewById(R.id.textGlassGoliath)
-        textGlassKozel = findViewById(R.id.textGlassKozel)
-        textGlassBrugse = findViewById(R.id.textGlassBrugse)
-        textGlassPICHET = findViewById(R.id.textGlassPICHET)
-
-        // Восстанавливаем состояние TextView, если оно было сохранено ранее
-        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
-        textGlassFuller.text = sharedPref.getString("textGlassFuller", "0")
-        textGlassFourchette.text = sharedPref.getString("textGlassFourchette", "0")
-        textGlassGoliath.text = sharedPref.getString("textGlassGoliath", "0")
-        textGlassKozel.text = sharedPref.getString("textGlassKozel", "0")
-        textGlassBrugse.text = sharedPref.getString("textGlassBrugse", "0")
-        textGlassPICHET.text = sharedPref.getString("textGlassPICHET", "0")
+        //id текстов
+        val textIds = intArrayOf(R.id.textGlassFuller, R.id.textGlassFourchette,
+            R.id.textGlassGoliath, R.id.textGlassKozel, R.id.textGlassBrugse, R.id.textGlassPICHET)
+        //инициализируем AllText
+        AllText = Array(6) { TextView(this) }
+        for(i in AllText.indices){
+            AllText[i] = findViewById(textIds[i])
+        }
+        RestoringTheStateOfTheTextView()
+        setOnClickListenerAllButton()
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        // Сохраняем состояние TextView перед уничтожением активити
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         with (sharedPref.edit()) {
-            putInt("totalPrice", MainActivity.totalPrice)
-            putString("textGlassFuller", textGlassFuller.text.toString())
-            putString("textGlassFourchette", textGlassFourchette.text.toString())
-            putString("textGlassGoliath", textGlassGoliath.text.toString())
-            putString("textGlassKozel", textGlassKozel.text.toString())
-            putString("textGlassBrugse", textGlassBrugse.text.toString())
-            putString("textGlassPICHET", textGlassPICHET.text.toString())
+            for (i in AllText.indices) {
+                putString("textViewGlasses_$i", AllText[i].text.toString())
+            }
             apply()
         }
     }
-    //------------------
-    fun plussGlassFuller(view: View){
-        plus(449,  textGlassFuller)
+    fun RestoringTheStateOfTheTextView() {
+        // Восстанавливаем состояние TextView, если оно было сохранено ранее
+        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        for (i in AllText.indices) {
+            AllText[i].text = sharedPref.getString("textViewGlasses_$i", "0")
+        }
     }
-    fun minusGlassFuller(view: View){
-        minus(449, textGlassFuller)
+    fun setOnClickListenerAllButton(){
+        val buttonIds = intArrayOf(R.id.buttonGlassFullerMinus, R.id.buttonGlassFullerPlus,
+            R.id.buttonGlassFourchetteMinus, R.id.buttonGlassFourchettePlus, R.id.buttonGlassGoliathMinus, R.id.buttonGlassGoliathPlus,
+            R.id.buttonGlassKozelMinus, R.id.buttonGlassKozelPlus, R.id.buttonGlassBrugseMinus, R.id.buttonGlassBrugsePlus,
+            R.id.buttonGlassPICHETMinus, R.id.buttonGlassPICHETPlus,)
+        val values = intArrayOf(449, 675, 749, 389, 579, 1379)
+        for ((j, i) in (buttonIds.indices step 2).withIndex()) {
+            val buttonMinus: Button = findViewById(buttonIds[i])
+            val buttonPlus: Button = findViewById(buttonIds[i + 1])
+            buttonMinus.setOnClickListener { minus(values[j], AllText[j]) }
+            buttonPlus.setOnClickListener { plus(values[j], AllText[j]) }
+        }
     }
-    //------------------
-    fun plussGlassFourchette(view: View){
-        plus(675,  textGlassFourchette)
-    }
-    fun minusGlassFourchette(view: View){
-        minus(675, textGlassFourchette)
-    }
-    //------------------
-    fun plussGlassGoliath(view: View){
-        plus(749,  textGlassGoliath)
-    }
-    fun minusGlassGoliath(view: View){
-        minus(749, textGlassGoliath)
-    }
-    //------------------
-    fun plussGlassKozel(view: View){
-        plus(389,  textGlassKozel)
-    }
-    fun minusGlassKozel(view: View){
-        minus(389, textGlassKozel)
-    }
-    //------------------
-    fun plussGlassBrugse(view: View){
-        plus(579,  textGlassBrugse)
-    }
-    fun minusGlassBrugse(view: View){
-        minus(579, textGlassBrugse)
-    }
-    //------------------
-    fun plussGlassPICHET(view: View){
-        plus(1379,  textGlassPICHET)
-    }
-    fun minusGlassPICHET(view: View){
-        minus(1379, textGlassPICHET)
-    }
-    //------------------
-
     fun plus(changeTotalPrice:Int, textCount: TextView){
         val newCount: Int = textCount.text.toString().toInt() + 1
         textCount.text = newCount.toString()

@@ -8,21 +8,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 import com.example.pivnyxa.MainActivity.Companion.totalPrice
 
 class snaks : AppCompatActivity() {
-    private lateinit var textStrays : TextView
-    private lateinit var textGov : TextView
-    private lateinit var textConina : TextView
-    private lateinit var textBaranina : TextView
-    private lateinit var textIndeika : TextView
-    private lateinit var textYtka : TextView
-    private lateinit var textChicken : TextView
-    private lateinit var textPork : TextView
-
+    private lateinit var AllText: Array<TextView>
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +25,6 @@ class snaks : AppCompatActivity() {
         val yourLayout = findViewById<LinearLayout>(R.id.yourLayoutSnaks)
         var initialY = 0f
         var lastY = 0f // Сохраняем последнее смещение
-
         nestedScrollView.setOnTouchListener { _, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
@@ -48,100 +40,48 @@ class snaks : AppCompatActivity() {
             }
             true
         }
-        textStrays = findViewById(R.id.textStrays)
-        textGov = findViewById(R.id.textGov)
-        textConina = findViewById(R.id.textConina)
-        textBaranina = findViewById(R.id.textBaranina)
-        textIndeika = findViewById(R.id.textIndeika)
-        textYtka = findViewById(R.id.textYtka)
-        textChicken = findViewById(R.id.textChicken)
-        textPork = findViewById(R.id.textPork)
+        //id текстов
+        val textIds = intArrayOf(R.id.textPork, R.id.textChicken, R.id.textYtka, R.id.textIndeika,
+            R.id.textBaranina, R.id.textConina, R.id.textGov, R.id.textStrays)
+        //инициализируем AllText
+        AllText = Array(8) { TextView(this) }
+        for(i in AllText.indices){
+            AllText[i] = findViewById(textIds[i])
+        }
 
-        // Восстанавливаем состояние TextView, если оно было сохранено ранее
-        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
-        textStrays.text = sharedPref.getString("textStrays", "0")
-        textGov.text = sharedPref.getString("textGov", "0")
-        textConina.text = sharedPref.getString("textConina", "0")
-        textBaranina.text = sharedPref.getString("textBaranina", "0")
-        textIndeika.text = sharedPref.getString("textIndeika", "0")
-        textYtka.text = sharedPref.getString("textYtka", "0")
-        textChicken.text = sharedPref.getString("textChicken", "0")
-        textPork.text = sharedPref.getString("textPork", "0")
+        RestoringTheStateOfTheTextView()
+        setOnClickListenerAllButton()
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        // Сохраняем состояние TextView перед уничтожением активити
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
         with (sharedPref.edit()) {
-            putInt("totalPrice", totalPrice)
-            putString("textStrays", textStrays.text.toString())
-            putString("textGov", textGov.text.toString())
-            putString("textConina", textConina.text.toString())
-            putString("textBaranina", textBaranina.text.toString())
-            putString("textIndeika", textIndeika.text.toString())
-            putString("textYtka", textYtka.text.toString())
-            putString("textChicken", textChicken.text.toString())
-            putString("textPork", textPork.text.toString())
+            for (i in AllText.indices) {
+                putString("textViewSnaks_$i", AllText[i].text.toString())
+            }
             apply()
         }
     }
-    //------------------
-    fun plussStrays(view: View){
-        plus(219,  textStrays)
+    fun RestoringTheStateOfTheTextView() {
+        // Восстанавливаем состояние TextView, если оно было сохранено ранее
+        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
+        for (i in AllText.indices) {
+            AllText[i].text = sharedPref.getString("textViewSnaks_$i", "0")
+        }
     }
-    fun minusStrays(view: View){
-        minus(219, textStrays)
+    fun setOnClickListenerAllButton(){
+        val buttonIds = intArrayOf(R.id.buttonPorkMinus, R.id.buttonPorkPlus, R.id.buttonChickenMinus, R.id.buttonChickenPlus,
+            R.id.buttonYtkaMinus, R.id.buttonYtkaPlus, R.id.buttonIndeikaMinus, R.id.buttonIndeikaPlus,
+            R.id.buttonBaraninaMinus, R.id.buttonBaraninaPlus, R.id.buttonConinaMinus, R.id.buttonConinaPlus,
+            R.id.buttonGovMinus, R.id.buttonGovPlus, R.id.buttonStraysMinus, R.id.buttonStraysPlus)
+        val values = intArrayOf(175, 149, 195, 175, 195, 185, 179, 219)
+        for ((j, i) in (buttonIds.indices step 2).withIndex()) {
+            val buttonMinus: Button = findViewById(buttonIds[i])
+            val buttonPlus: Button = findViewById(buttonIds[i + 1])
+            buttonMinus.setOnClickListener { minus(values[j], AllText[j]) }
+            buttonPlus.setOnClickListener { plus(values[j], AllText[j]) }
+        }
     }
-    //------------------
-    fun plussGov(view: View){
-        plus(179,  textGov)
-    }
-    fun minusGov(view: View){
-        minus(179, textGov)
-    }
-    //------------------
-    fun plussConina(view: View){
-        plus(185,  textConina)
-    }
-    fun minusConina(view: View){
-        minus(185, textConina)
-    }
-    //------------------
-    fun plussBaranina(view: View){
-        plus(195,  textBaranina)
-    }
-    fun minusBaranina(view: View){
-        minus(195, textBaranina)
-    }
-    //------------------
-    fun plussIndeika(view: View){
-        plus(175,  textIndeika)
-    }
-    fun minusIndeika(view: View){
-        minus(175, textIndeika)
-    }
-    //------------------
-    fun plussYtka(view: View){
-        plus(195,  textYtka)
-    }
-    fun minusYtka(view: View){
-        minus(195, textYtka)
-    }
-    //------------------
-    fun plussChicken(view: View){
-        plus(149,  textChicken)
-    }
-    fun minusChicken(view: View){
-        minus(149, textChicken)
-    }
-    //------------------
-    fun plussPork(view: View){
-        plus(175,  textPork)
-    }
-    fun minusPork(view: View){
-        minus(175, textPork)
-    }
-    //------------------
     fun plus(changeTotalPrice:Int, textCount: TextView){
         val newCount: Int = textCount.text.toString().toInt() + 1
         textCount.text = newCount.toString()

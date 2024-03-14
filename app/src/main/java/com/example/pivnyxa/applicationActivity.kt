@@ -12,9 +12,9 @@ import com.example.pivnyxa.MainActivity.Companion.totalPrice
 class applicationActivity : AppCompatActivity() {
     private lateinit var textPhone: EditText
     private lateinit var textAddress : EditText
-    companion object{
-        var Products : String = ""
-    }
+    private lateinit var Products: Array<String>
+    var ProductsAll: String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_application)
@@ -25,18 +25,27 @@ class applicationActivity : AppCompatActivity() {
         val textTotalPrice: TextView = findViewById(R.id.textViewTotalPrice)
         textTotalPrice.text = totalPrice.toString()
 
+        Products = Array(33, { "" })
+
+        val sharedPref = getSharedPreferences("MyApp", MODE_PRIVATE)
+        for (i in Products.indices) {
+            if(i <= 19){
+                Products[i] = sharedPref.getString("textView_$i", "0").toString()
+            }
+            if(i in 20..27){
+                Products[i] = sharedPref.getString("textViewSnaks_$i", "0").toString()
+            }
+            if(i > 27){
+                Products[i] = sharedPref.getString("textViewGlasses_$i", "0").toString()
+            }
+        }
+        for (i in Products.indices){
+            ProductsAll += Products[i] + " "
+        }
     }
     fun sendARequest(view: View){
-        val dbHelper = MyDbHelper(this)
-        val db = dbHelper.writableDatabase
-
-        val values = ContentValues().apply {
-            put(MyDbHelper.COLUMN_ID, 1)
-            put(MyDbHelper.COLUMN_PHONE, textPhone.text.toString())
-            put(MyDbHelper.COLUMN_ADDRESS, textAddress.text.toString())
-            put(MyDbHelper.COLUMN_PRODUCTS, Products)
-        }
-        db.insert(MyDbHelper.TABLE_NAME, null, values)
+        val dbHelper = DatabaseHelper(this)
+        dbHelper.addingAnApplication(textPhone.text.toString(), textAddress.text.toString(),ProductsAll)
 
         // Восстанавливаем состояние TextView, если оно было сохранено ранее
         val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
@@ -44,15 +53,4 @@ class applicationActivity : AppCompatActivity() {
         editor.clear()
         editor.apply()
     }
-    /*
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        // Сохраняем состояние TextView перед уничтожением активити
-        val sharedPref = getSharedPreferences("MyApp", Context.MODE_PRIVATE)
-        with (sharedPref.edit()) {
-            putInt("totalPrice", totalPrice)
-            apply()
-        }
-    }
-     */
 }
